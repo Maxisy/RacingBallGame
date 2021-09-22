@@ -12,7 +12,11 @@ public class Camera : MonoBehaviour
     {
         transform.LookAt(ObjectToTrack);
 
-        var targetPosition =  ObjectToTrack.position + delta;
+        var trackedRigidbody = ObjectToTrack.GetComponent<Rigidbody>();
+        var ballSpeed = trackedRigidbody.velocity.magnitude;
+
+        var targetPosition = ObjectToTrack.position + delta * (ballSpeed / 20 + 1f);
+
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.smoothDeltaTime * 2f);
     }
 }
