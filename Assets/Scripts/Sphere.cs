@@ -23,6 +23,6 @@ public class Sphere : MonoBehaviour
             direction += Vector3.right;
 
         var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(direction / 2);
+        rigidbody.AddForce(direction * 1.5f);
     }
 }
