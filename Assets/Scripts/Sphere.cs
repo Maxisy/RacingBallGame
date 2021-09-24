@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Sphere : MonoBehaviour
 {
-
+    public bool CanMove = false;
 
     void Update()
     {
+        if (!CanMove) return;
+
         var direction = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
@@ -23,6 +25,6 @@ public class Sphere : MonoBehaviour
             direction += Vector3.right;
 
         var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(direction * 1.5f);
+        rigidbody.AddForce(direction * 3);
     }
 }

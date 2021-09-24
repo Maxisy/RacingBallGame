@@ -4,6 +4,8 @@
 
 *.sln
 
+/Temp
+
 UpgradeLog.htm
 
 ## Ignore Visual Studio temporary files, build results, and
