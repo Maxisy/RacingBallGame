@@ -5,6 +5,7 @@ using UnityEngine;
 public class Sphere : MonoBehaviour
 {
     public bool CanMove = false;
+    public bool PassedCheckpoint = false;
 
     void Update()
     {
@@ -12,19 +13,38 @@ public class Sphere : MonoBehaviour
 
         var direction = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
-            direction += Vector3.forward;
+        if (!PassedCheckpoint)
+        {
 
-        if (Input.GetKey(KeyCode.S))
-            direction += Vector3.back;
+            if (Input.GetKey(KeyCode.W))
+                direction += Vector3.forward;
 
-        if (Input.GetKey(KeyCode.A))
-            direction += Vector3.left;
+            if (Input.GetKey(KeyCode.S))
+                direction += Vector3.back;
 
-        if (Input.GetKey(KeyCode.D))
-            direction += Vector3.right;
+            if (Input.GetKey(KeyCode.A))
+                direction += Vector3.left;
+
+            if (Input.GetKey(KeyCode.D))
+                direction += Vector3.right;
+
+        } 
+        else
+        {
+            if (Input.GetKey(KeyCode.W))
+                direction += Vector3.left;
+
+            if (Input.GetKey(KeyCode.S))
+                direction += Vector3.right;
+
+            if (Input.GetKey(KeyCode.A))
+                direction += Vector3.back;
+
+            if (Input.GetKey(KeyCode.D))
+                direction += Vector3.forward;
+        }
 
         var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(direction * 3);
+        rigidbody.AddForce(direction * (Time.deltaTime * 500));
     }
 }

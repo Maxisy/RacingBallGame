@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -13,17 +14,20 @@ public class GameController : MonoBehaviour
     public AudioClip GameWinSound;
     public AudioClip GameLoseSound;
 
+    public int level;
+
     void Start()
     {
+        Cursor.visible = false;
+
         UpdateCrystalCounterText();
         StartCoroutine(CountdownCoroutine());
 
         GameEndText.enabled = false;
-    }
 
-    void Update()
-    {
+        level = FindObjectOfType<SceneName>().GetLevel();
 
+        Cursor.visible = false;
     }
 
     IEnumerator CountdownCoroutine()
@@ -68,8 +72,7 @@ public class GameController : MonoBehaviour
 
     public void EndOfGame(bool win)
     {
-        
-
+        level++;
         StartCoroutine(EndOfGameCoroutine(win));
     }
 
@@ -91,7 +94,25 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(5);
 
-        Application.Quit();
 
+        if (win)
+        {
+            if (level == 3)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene("" + level + "");
+            }
+        }
+        else
+        {
+            Application.Quit();
+        }
+
+        
+
+        
     }
 }
