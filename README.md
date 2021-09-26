@@ -2,15 +2,18 @@
  - wejdź w zakładkę "releases" <br>
  ![Zrzut ekranu (13)](https://user-images.githubusercontent.com/63149997/134785023-84ef2299-dc18-4e0f-b6dd-31ed2b7b0bc0.png)
 <br><br>
- - pobierz plik RacingBall.zip <br>
- ![Zrzut ekranu (12)](https://user-images.githubusercontent.com/63149997/134785030-f3c0da59-fcb5-48d4-b543-e10706755a82.png)
+- Dla Windows: <br>
+  - pobierz plik RacingBall.exe z najnowszego wydania i uruchom go<br>
+ ![download-exe](https://user-images.githubusercontent.com/63149997/134816315-a74607a6-0af9-4730-8a05-1c45e8b9f12d.png)
+  - zainstaluj grę posługując się wskazówkami z installera
 <br><br>
- - wypakuj plik RacingBall.zip
-   - na Windowskie klinknij na niego prawym przyciskiem myszy i kliknij "Wyodrębnij wszystkie" <br>
- ![Zrzut ekranu (14)](https://user-images.githubusercontent.com/63149997/134785035-0c9cf4fc-7895-4bd4-b787-330fe079a611.png)
+- Dla MacOS/Linux: <br>
+  - pobierz plik RacingBall.zip z najnowszego wydania <br>
+ ![download-zip](https://user-images.githubusercontent.com/63149997/134816432-c1fa9ac6-dc91-40ef-847f-f72d65796a3d.png)
 <br><br>
- - wejdź w wypakowany folder i otwórz plik "Racing ball.exe" <br>
- ![Zrzut ekranu (11)](https://user-images.githubusercontent.com/63149997/134784962-52281e0f-3f24-4657-9bcb-98e763073177.png)
+  - wypakuj plik RacingBall.zip
+<br>
+  - wejdź w wypakowany folder i otwórz plik "Racing ball.exe" <br>
 
 
 <b>Sterowanie:</b>
@@ -21,4 +24,4 @@
  
 <b>Zasady:</b>
 Wygrana następuje po zebraniu wszystkich żółtych kryształów umieszczonych na mapie i przejechaniu przez linię mety.
-Jeśli wyjedziesz poza drogę, przegrywasz.
+Jeśli wyjedziesz poza drogę lub wjedziesz piłką na pachołek, przegrywasz.
